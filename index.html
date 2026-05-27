@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Северный Кавказ — гид по горам, традициям и активному отдыху</title>
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,9 +25,9 @@
 </header>
 
 <main>
-    <!-- hero секция -->
+    <!-- Hero-секция -->
     <section id="hero" class="hero">
-        <div class="hero-overlay-pattern"></div> <!-- этнический узор поверх фона -->
+        <div class="hero-overlay-pattern"></div>
         <div class="hero-content">
             <h1 class="hero-title">Северный Кавказ: где горы встречают традиции</h1>
             <p class="hero-sub">Активный отдых, древняя культура и гостеприимство — откройте для себя настоящий Кавказ</p>
@@ -36,7 +35,7 @@
         </div>
     </section>
 
-    <!-- О регионе + цитата -->
+    <!-- О регионе -->
     <section class="container">
         <div class="about-text">
             <h2 class="section-title">О регионе</h2>
@@ -50,10 +49,10 @@
         </div>
     </section>
 
-    <!-- Декоративный разделитель с орнаментом -->
+    <!-- Декоративный разделитель -->
     <div class="ornament-divider"></div>
 
-    <!-- Достопримечательности -->
+    <!-- Достопримечательности (карточки) -->
     <section id="sights" class="container">
         <h2 class="section-title">Места, которые нужно увидеть</h2>
         <div class="cards-grid" id="sightsGrid"></div>
@@ -61,15 +60,17 @@
 
     <div class="ornament-divider"></div>
 
-    <!-- Традиции -->
+    <!-- Традиции (текстовые блоки, без карточек) -->
     <section id="traditions" class="container">
         <h2 class="section-title">Душа Кавказа: обычаи, которые живы веками</h2>
-        <div class="cards-grid" id="traditionsGrid"></div>
+        <div class="traditions-grid" id="traditionsGrid">
+            <!-- Блоки будут созданы через JS как текстовые, без карточек -->
+        </div>
     </section>
 
     <div class="ornament-divider"></div>
 
-    <!-- Активный отдых -->
+    <!-- Активный отдых (карточки) -->
     <section id="active" class="container">
         <h2 class="section-title">Приключения для каждого</h2>
         <div class="cards-grid" id="activeGrid"></div>
@@ -113,7 +114,7 @@
     <div class="ornament">✦ ❀ ✿ ⠀  Наследие гор  ⠀ ✿ ❀ ✦</div>
 </footer>
 
-<!-- modal overlay -->
+<!-- Модальное окно -->
 <div id="modalOverlay" class="modal-overlay">
     <div class="modal-container">
         <button class="modal-close" id="closeModalBtn">&times;</button>
