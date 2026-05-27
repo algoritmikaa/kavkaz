@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Северный Кавказ — гид по горам, традициям и активному отдыху</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="container navbar">
+        <div class="logo">Северный Кавказ <span>| Guide</span></div>
+        <button class="burger" id="burgerBtn" aria-label="Меню"><i class="fas fa-bars"></i></button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#hero" class="nav-link">Главная</a></li>
+            <li><a href="#sights" class="nav-link">Достопримечательности</a></li>
+            <li><a href="#traditions" class="nav-link">Традиции</a></li>
+            <li><a href="#active" class="nav-link">Активный отдых</a></li>
+            <li><a href="#guide" class="nav-link">Гайд</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- hero секция -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay-pattern"></div> <!-- этнический узор поверх фона -->
+        <div class="hero-content">
+            <h1 class="hero-title">Северный Кавказ: где горы встречают традиции</h1>
+            <p class="hero-sub">Активный отдых, древняя культура и гостеприимство — откройте для себя настоящий Кавказ</p>
+            <button class="btn-primary" id="scrollToGuideBtn">Исследовать гайд</button>
+        </div>
+    </section>
+
+    <!-- О регионе + цитата -->
+    <section class="container">
+        <div class="about-text">
+            <h2 class="section-title">О регионе</h2>
+            <p>Северный Кавказ — край удивительного многообразия: здесь соседствуют суровые пятитысячники и зелёные альпийские луга, древние башни и шумные водопады. Республики Карачаево-Черкесия, Кабардино-Балкария, Северная Осетия, Ингушетия, Чечня и Дагестан хранят уникальные традиции, ремёсла и кухню. <strong>6 из 10 высочайших вершин России</strong> находятся именно здесь, включая двуглавый Эльбрус (5642 м).</p>
+            <p>Путешественников ждут захватывающие трекинги, рафтинг, горнолыжные курорты и, главное, искренняя культура, где каждый гость — подарок судьбы.</p>
+            <div class="quote-block">
+                <i class="fas fa-quote-left"></i> 
+                «У нас горец не тот, кто горы покорил, а тот, кто сердце не уронил» — осетинское изречение.<br>
+                <span class="native-quote">«Æрдзы фæлтæрæн нæй фарн»</span> (в гостях не ищут вины).
+            </div>
+        </div>
+    </section>
+
+    <!-- Декоративный разделитель с орнаментом -->
+    <div class="ornament-divider"></div>
+
+    <!-- Достопримечательности -->
+    <section id="sights" class="container">
+        <h2 class="section-title">Места, которые нужно увидеть</h2>
+        <div class="cards-grid" id="sightsGrid"></div>
+    </section>
+
+    <div class="ornament-divider"></div>
+
+    <!-- Традиции -->
+    <section id="traditions" class="container">
+        <h2 class="section-title">Душа Кавказа: обычаи, которые живы веками</h2>
+        <div class="cards-grid" id="traditionsGrid"></div>
+    </section>
+
+    <div class="ornament-divider"></div>
+
+    <!-- Активный отдых -->
+    <section id="active" class="container">
+        <h2 class="section-title">Приключения для каждого</h2>
+        <div class="cards-grid" id="activeGrid"></div>
+    </section>
+
+    <div class="ornament-divider"></div>
+
+    <!-- Гайд аккордеон -->
+    <section id="guide" class="container">
+        <h2 class="section-title">Советы от местных</h2>
+        <div class="accordion" id="guideAccordion">
+            <div class="accordion-item">
+                <div class="accordion-header">🗓️ Когда ехать? <i class="fas fa-chevron-down"></i></div>
+                <div class="accordion-content">Лучшее время — май–октябрь для трекинга и экскурсий: цветут альпийские луга, тепло. Зимний сезон (декабрь–март) — для горнолыжных курортов Домбай, Архыз. Август — пик туристов, но и самый комфортный. Весной мощные водопады, осенью золотая листва.</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">🎒 Что надеть и взять? <i class="fas fa-chevron-down"></i></div>
+                <div class="accordion-content">Обязательно треккинговую обувь, непродуваемую куртку, солнцезащитный крем, головной убор, флиску даже летом в горах. Аптечку, термос, powerbank. Уважение к местной одежде: в республиках не стоит ходить в слишком открытых нарядах.</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">🚗 Транспорт и передвижение <i class="fas fa-chevron-down"></i></div>
+                <div class="accordion-content">Лучше всего на своём авто или арендованном (полный привод для высокогорья). Регулярные автобусы и маршрутки ходят между Нальчиком, Владикавказом, Махачкалой. На перевалы лучше брать местного гида с внедорожником.</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">🍴 Что попробовать из еды? <i class="fas fa-chevron-down"></i></div>
+                <div class="accordion-content">Осетинские пироги с сыром, картофелем, фасолью; хычины (балкарские/карачаевские лепёшки); чеченский жижиг-галнаш; дагестанские чуду; шашлык на виноградной лозе. Обязательно айран и кавказский мёд.</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <div>📞 Туристический центр «Горы Сердца»: +7 (928) 123-45-67<br>📍 г. Пятигорск, проспект Кирова, 22<br>✉️ info@kavkazguide.ru</div>
+        <div class="social-icons">
+            <i class="fab fa-telegram"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-vk"></i>
+        </div>
+    </div>
+    <div class="ornament">✦ ❀ ✿ ⠀  Наследие гор  ⠀ ✿ ❀ ✦</div>
+</footer>
+
+<!-- modal overlay -->
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal-container">
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
