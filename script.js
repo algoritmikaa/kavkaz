@@ -1,4 +1,4 @@
-// ========== ДАННЫЕ ДЛЯ КАРТОЧЕК (полностью как в предыдущей версии) ==========
+// Данные для достопримечательностей (с модальными окнами)
 const sightCards = [
     { title: "Гора Эльбрус", img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&auto=format", shortDesc: "Двуглавая вершина — самая высокая в Европе, 5642 м.", badge: "🏔️ 5 642 м", modalContent: "<h3>Эльбрус — крыша Европы</h3><p>Высота западной вершины 5642 м, восточной — 5621 м. Легенда гласит, что именно к этой горе был прикован Прометей. Сегодня Эльбрус привлекает альпинистов со всего мира. Маршруты: Южный склон (канатные дороги до 3800 м) — классический, требует подготовки; Северный склон — более дикий. Лучший сезон для восхождения: июль–август. У подножия — Приэльбрусье с минеральными источниками и кафе с хычинами.</p><p>Совет: акклиматизируйтесь 2–3 дня в Терсколе, используйте услуги гида. Вид с седловины — невероятная панорама Кавказского хребта.</p>" },
     { title: "Чегемские водопады", img: "https://images.unsplash.com/photo-1593174676240-6ebcedced1b0?w=500&auto=format", shortDesc: "Каскад водопадов в живописном ущелье, мощь и красота.", badge: "💧 легендарные", modalContent: "<h3>Чегемские водопады (Кабардино-Балкария)</h3><p>Группа водопадов на реке Чегем, самый известный «Девичьи косы» (30 м). Зимой замерзают в гигантские ледяные колонны — популярное место для альпинистов-ледолазов. Летом грохот воды слышен за километр. По ущелью можно прогуляться по смотровым площадкам. В 2 км — Чегемское ущелье с древними башнями.</p><p>Вход на экотропу — 200₽. Лучшее время: май-июнь (полноводье) или декабрь-февраль (ледяной плен). Рядом кафе с балкарским чаем.</p>" },
@@ -6,18 +6,21 @@ const sightCards = [
     { title: "Озеро Кезеной-Ам", img: "https://picsum.photos/id/104/500/300?random=1", shortDesc: "Самое глубокое горное озеро на Кавказе, бирюзовая вода.", badge: "🏞️ ЧЕЧНЯ", modalContent: "<h3>Кезеной-Ам (Эйзенам)</h3><p>Расположено на границе Чечни и Дагестана, на высоте 1870 м. Длина 2 км, глубина до 74 м. Вода прозрачная, летом прогревается до 18°C. Здесь водится эйзенамская форель (попробуйте уху в кафе на берегу). Можно арендовать катамаран, а зимой озеро замерзает — катаются на коньках. В 2021 году построен туристический комплекс «Кезеной-Ам» с отелями и спортплощадками. Легенда: озеро возникло из слез юной девушки, оплакивающей возлюбленного.</p>" }
 ];
 
-const traditionsCards = [
-    { title: "Гостеприимство и куначество", img: "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?w=500&auto=format", shortDesc: "Гость — посланник Бога, на Кавказе это закон.", modalContent: "<h3>Кавказское гостеприимство: глубинный код</h3><p>Куначество — древний обычай побратимства. Гостя встречают самым лучшим: стол ломится от осетинских пирогов, мяса и сыров. Даже незнакомцу откроют дверь и накормят. Традиции застолья: старший за столом произносит тост за Бога, за родителей, за гостя. Уйти без еды — оскорбление. В любом ауле вас угостят айраном и лепёшками. Помните: отказываться трижды не принято.</p><p>Цифры: более 80% жителей считают гостеприимство главной чертой.</p>" },
-    { title: "Национальные танцы (лезгинка)", img: "https://images.unsplash.com/photo-1588099768531-a72d8a198f69?w=500&auto=format", shortDesc: "Огонь, грация и мужской характер в каждом движении.", modalContent: "<h3>Лезгинка — танец, объединяющий народы</h3><p>Лезгинка известна у всех народов Кавказа: от адыгов до чеченцев. Символизирует орла и горянку — мужчина соревнуется в прыжках и техничности, женщина плавно скользит. На свадьбах танцоры могут состязаться часами. Современные ансамбли сохранили 200+ движений. Лучшие школы танцев находятся в Махачкале и Нальчике. Туристам преподают базовые па на мастер-классах.</p><p>Лезгинка включена в список нематериального наследия ЮНЕСКО.</p>" },
-    { title: "Ремёсла: ковры, бурки, резьба", img: "https://picsum.photos/id/108/500/300?random=2", shortDesc: "Тысячелетние техники, живущие в каждом узоре.", modalContent: "<h3>Ремесленное наследие</h3><p>Дагестан славится коврами ручной работы (село Кубачи), балкарские бурки из овечьей шерсти — непромокаемые плащи для чабанов. Резьба по камню в Ингушетии и чеканка по серебру. В аулах можно купить настоящий кинжал или украшения с чернением. Многие ремесленники проводят экскурсии и мастер-классы, например, в высокогорном Гамсутле.</p><p>Не уезжайте без шерстяного платка или деревянной утвари с орнаментом.</p>" }
-];
-
+// Данные для активного отдыха (карточки)
 const activeCards = [
     { title: "Трекинг и горные походы", img: "https://images.unsplash.com/photo-1588099768531-a72d8a198f69?w=500&auto=format", shortDesc: "Маршруты к водопадам и ледникам, сложность от лёгкой до экстрима.", level: "⭐⭐⭐ сезон: июнь–сент", modalContent: "<h3>Пешие маршруты по Чегемскому и Баксанскому ущелью</h3><p>Популярный трек к подножью Эльбруса (озеро Гижгит), или к ледникам Адылсу. Многодневный маршрут «Карачаево-Черкесия: Архыз — перевал Пхия». Требуется физическая подготовка. Самый лёгкий поход — к Чегемским водопадам (3 км). Берите карты Maps.me, проверяйте погоду, ходите с гидами в высокогорье.</p><p>Групповые туры: 5 дней от 25 000₽ с проживанием. Не забудьте палки и гамаши от камней.</p>" },
     { title: "Зимние виды спорта (Домбай, Архыз)", img: "https://picsum.photos/id/35/500/300?random=3", shortDesc: "Качественные трассы, фанпарки и потрясающие виды.", level: "❄️ декабрь–апрель", modalContent: "<h3>Горнолыжный рай — Домбай и Архыз</h3><p>Курорт Домбай (1600–3168 м) предлагает 25 км трасс, включая чёрные. Архыз — более современный, с 25 подъёмниками и школой сноуборда. Сезон длится с декабря по апрель. Прокат снаряжения от 1500₽/день. Для фрирайдера — дикие склоны, но лавинная опасность. Лучшие отели: «Крокус», «Амазонка». Подъёмник на вершину Мусса-Ачитара открывает невероятную панораму Главного хребта.</p><p>Совет: бронируйте жилье за 2 месяца, в пик спрос огромен.</p>" },
     { title: "Рафтинг и джиппинг", img: "https://picsum.photos/id/294/500/300?random=4", shortDesc: "Ущелья, бурные реки и бездорожье.", level: "🌊 рафтинг май–сент", modalContent: "<h3>Река Черек, Баксан и джип-туры по перевалам</h3><p>Рафтинг 3–4 категории сложности на реке Черек (Кабардино-Балкария) — острые ощущения гарантированы. Сплавы проходят с инструктором, стоимость от 3000₽. Джиппинг: заброска к ледникам или в высокогорные села. Самый эпичный маршрут — подъем на плато Бермамыт (вид на Эльбрус).</p><p>Экскурсии на УАЗ или Toyota Land Cruiser. С собой возьмите тёплую куртку, дождевик, фотоаппарат.</p>" }
 ];
 
+// Данные для традиций (текстовые блоки, без карточек)
+const traditionsData = [
+    { icon: "fas fa-hand-sparkles", title: "Гостеприимство и куначество", desc: "Гость на Кавказе — посланник Бога. Куначество — древний обычай побратимства, где даже незнакомцу откроют дверь и накормят самым лучшим. За столом старший произносит тосты за Бога, родителей и гостя. Отказаться от угощения трижды — не принято." },
+    { icon: "fas fa-drumstick-bite", title: "Национальная кухня", desc: "Осетинские пироги с сыром, картофелем, фасолью; балкарские хычины; чеченский жижиг-галнаш; дагестанские чуду; шашлык на виноградной лозе. Обязательно айран и кавказский мёд. Каждое блюдо — часть ритуала гостеприимства." },
+    { icon: "fas fa-music", title: "Танцы и музыка", desc: "Лезгинка — танец, объединяющий народы Кавказа. Символизирует орла и горянку. На свадьбах танцоры соревнуются часами. Народные инструменты: зурна, гармоника, барабан. Танец включён в нематериальное наследие ЮНЕСКО." }
+];
+
+// Функция генерации карточек (для sight и active)
 function renderCards(containerId, cardsArray, type) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -37,13 +40,13 @@ function renderCards(containerId, cardsArray, type) {
         `;
         container.appendChild(cardDiv);
     });
+    // Обработчики для кнопок карточек
     document.querySelectorAll(`#${containerId} .btn-card`).forEach(btn => {
         btn.addEventListener('click', () => {
             const type = btn.getAttribute('data-type');
             const idx = parseInt(btn.getAttribute('data-idx'));
             let contentObj = null;
             if (type === 'sight') contentObj = sightCards[idx];
-            else if (type === 'tradition') contentObj = traditionsCards[idx];
             else if (type === 'active') contentObj = activeCards[idx];
             if (contentObj) {
                 document.getElementById('modalContent').innerHTML = `<div class="modal-title">${contentObj.title}</div><div class="modal-text">${contentObj.modalContent}</div>`;
@@ -53,17 +56,37 @@ function renderCards(containerId, cardsArray, type) {
     });
 }
 
+// Функция генерации традиций (текстовые блоки, без карточек)
+function renderTraditions() {
+    const container = document.getElementById('traditionsGrid');
+    if (!container) return;
+    container.innerHTML = '';
+    traditionsData.forEach(tradition => {
+        const block = document.createElement('div');
+        block.className = 'tradition-item';
+        block.innerHTML = `
+            <div class="tradition-icon"><i class="${tradition.icon}"></i></div>
+            <div class="tradition-title">${tradition.title}</div>
+            <div class="tradition-desc">${tradition.desc}</div>
+        `;
+        container.appendChild(block);
+    });
+}
+
+// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     renderCards('sightsGrid', sightCards, 'sight');
-    renderCards('traditionsGrid', traditionsCards, 'tradition');
     renderCards('activeGrid', activeCards, 'active');
+    renderTraditions();
 
+    // Модальное окно
     const modal = document.getElementById('modalOverlay');
     const closeModalBtn = document.getElementById('closeModalBtn');
     function closeModal() { modal.classList.remove('active'); }
     closeModalBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
+    // Бургер-меню
     const burger = document.getElementById('burgerBtn');
     const navMenu = document.getElementById('navMenu');
     burger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
@@ -71,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => { navMenu.classList.remove('active'); });
     });
 
+    // Плавный скролл для якорей
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -83,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('guide').scrollIntoView({ behavior: 'smooth' });
     });
 
+    // Аккордеон
     const accordionItems = document.querySelectorAll('.accordion-item');
     accordionItems.forEach(item => {
         const header = item.querySelector('.accordion-header');
@@ -95,8 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isOpen) {
                 content.classList.add('show');
                 if (icon) icon.style.transform = 'rotate(180deg)';
-            } else {
-                if (icon) icon.style.transform = 'rotate(0deg)';
             }
         });
     });
