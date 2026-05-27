@@ -89,12 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (firstIcon) firstIcon.style.transform = 'rotate(180deg)';
     }
 
-    // ========== ЗАМЕНА ССЫЛОК КАРТОЧЕК (только это добавлено) ==========
-    const newImages = {
-        "Гостеприимство и куначество": "https://avatars.mds.yandex.net/get-vthumb/4605631/82bfcda30e5b1adbce334da640c645dd/564x318_1",
-        "Национальная кухня": "https://avatars.mds.yandex.net/get-vertis-journal/4471904/21_Image_fx-111-2_kopiya.jpg_1755549714000/1600x1600",
-        "Танцы и музыка": "https://cdn-image.zvuk.com/pic?hash=150811a9-2a42-40be-932b-35e9097abfbc&id=42574099&size=large&type=release"
-    };
+    
 
     // Ищем все карточки (подставьте свой селектор, если нужно)
     const cards = document.querySelectorAll('.card, .cards__item, .card-item');
