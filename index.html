@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Северный Кавказ — гид по горам, традициям и активному отдыху</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,7 +25,7 @@
 </header>
 
 <main>
-    <!-- Hero-секция -->
+    <!-- Hero -->
     <section id="hero" class="hero">
         <div class="hero-overlay-pattern"></div>
         <div class="hero-content">
@@ -49,29 +49,128 @@
         </div>
     </section>
 
-    <!-- Декоративный разделитель -->
     <div class="ornament-divider"></div>
 
-    <!-- Достопримечательности (карточки) -->
+    <!-- Достопримечательности (карточки с изображениями в HTML) -->
     <section id="sights" class="container">
         <h2 class="section-title">Места, которые нужно увидеть</h2>
-        <div class="cards-grid" id="sightsGrid"></div>
+        <div class="cards-grid" id="sightsGrid">
+            <!-- Карточка 1 -->
+            <div class="card" data-modal="modal-elbrus">
+                <img class="card-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&auto=format" alt="Гора Эльбрус" loading="lazy">
+                <div class="card-content">
+                    <div class="badge">🏔️ 5 642 м</div>
+                    <div class="card-title">Гора Эльбрус</div>
+                    <div class="card-desc">Двуглавая вершина — самая высокая в Европе, 5642 м.</div>
+                    <button class="btn-card" data-modal="modal-elbrus">Подробнее</button>
+                </div>
+            </div>
+            <!-- Карточка 2 -->
+            <div class="card" data-modal="modal-chegem">
+                <img class="card-img" src="https://images.unsplash.com/photo-1593174676240-6ebcedced1b0?w=500&auto=format" alt="Чегемские водопады" loading="lazy">
+                <div class="card-content">
+                    <div class="badge">💧 легендарные</div>
+                    <div class="card-title">Чегемские водопады</div>
+                    <div class="card-desc">Каскад водопадов в живописном ущелье, мощь и красота.</div>
+                    <button class="btn-card" data-modal="modal-chegem">Подробнее</button>
+                </div>
+            </div>
+            <!-- Карточка 3 -->
+            <div class="card" data-modal="modal-dargavs">
+                <img class="card-img" src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=500&auto=format" alt="Даргавс Город мёртвых" loading="lazy">
+                <div class="card-content">
+                    <div class="badge">🏛️ X–XVIII вв.</div>
+                    <div class="card-title">Даргавс «Город мёртвых»</div>
+                    <div class="card-desc">Некрополь из каменных склепов, мистика и история.</div>
+                    <button class="btn-card" data-modal="modal-dargavs">Подробнее</button>
+                </div>
+            </div>
+            <!-- Карточка 4 -->
+            <div class="card" data-modal="modal-kezenoy">
+                <img class="card-img" src="https://picsum.photos/id/104/500/300?random=1" alt="Озеро Кезеной-Ам" loading="lazy">
+                <div class="card-content">
+                    <div class="badge">🏞️ ЧЕЧНЯ</div>
+                    <div class="card-title">Озеро Кезеной-Ам</div>
+                    <div class="card-desc">Самое глубокое горное озеро на Кавказе, бирюзовая вода.</div>
+                    <button class="btn-card" data-modal="modal-kezenoy">Подробнее</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="ornament-divider"></div>
 
-    <!-- Традиции (улучшенные современные блоки) -->
+    <!-- Традиции (улучшенные блоки с изображениями, больше воздуха, современный стиль) -->
     <section id="traditions" class="container">
         <h2 class="section-title">Душа Кавказа: обычаи, которые живы веками</h2>
-        <div class="traditions-grid" id="traditionsGrid"></div>
+        <div class="traditions-grid">
+            <div class="tradition-card">
+                <div class="tradition-img">
+                    <img src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe?w=400&auto=format" alt="Гостеприимство">
+                </div>
+                <div class="tradition-content">
+                    <div class="tradition-icon"><i class="fas fa-hand-sparkles"></i></div>
+                    <h3 class="tradition-title">Гостеприимство и куначество</h3>
+                    <p class="tradition-desc">Гость на Кавказе — посланник Бога. Куначество — древний обычай побратимства, где даже незнакомцу откроют дверь и накормят самым лучшим. За столом старший произносит тосты за Бога, родителей и гостя. Отказаться от угощения трижды — не принято.</p>
+                </div>
+            </div>
+            <div class="tradition-card">
+                <div class="tradition-img">
+                    <img src="https://picsum.photos/id/127/400/250?random=2" alt="Национальная кухня">
+                </div>
+                <div class="tradition-content">
+                    <div class="tradition-icon"><i class="fas fa-drumstick-bite"></i></div>
+                    <h3 class="tradition-title">Национальная кухня</h3>
+                    <p class="tradition-desc">Осетинские пироги с сыром, картофелем, фасолью; балкарские хычины; чеченский жижиг-галнаш; дагестанские чуду; шашлык на виноградной лозе. Обязательно айран и кавказский мёд. Каждое блюдо — часть ритуала гостеприимства.</p>
+                </div>
+            </div>
+            <div class="tradition-card">
+                <div class="tradition-img">
+                    <img src="https://images.unsplash.com/photo-1588099768531-a72d8a198f69?w=400&auto=format" alt="Танцы и музыка">
+                </div>
+                <div class="tradition-content">
+                    <div class="tradition-icon"><i class="fas fa-music"></i></div>
+                    <h3 class="tradition-title">Танцы и музыка</h3>
+                    <p class="tradition-desc">Лезгинка — танец, объединяющий народы Кавказа. Символизирует орла и горянку. На свадьбах танцоры соревнуются часами. Народные инструменты: зурна, гармоника, барабан. Танец включён в нематериальное наследие ЮНЕСКО.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="ornament-divider"></div>
 
-    <!-- Активный отдых (карточки) -->
+    <!-- Активный отдых (карточки с изображениями в HTML) -->
     <section id="active" class="container">
         <h2 class="section-title">Приключения для каждого</h2>
-        <div class="cards-grid" id="activeGrid"></div>
+        <div class="cards-grid" id="activeGrid">
+            <div class="card" data-modal="modal-trekking">
+                <img class="card-img" src="https://images.unsplash.com/photo-1588099768531-a72d8a198f69?w=500&auto=format" alt="Трекинг">
+                <div class="card-content">
+                    <div class="badge">⭐⭐⭐ сезон: июнь–сент</div>
+                    <div class="card-title">Трекинг и горные походы</div>
+                    <div class="card-desc">Маршруты к водопадам и ледникам, сложность от лёгкой до экстрима.</div>
+                    <button class="btn-card" data-modal="modal-trekking">Подробнее</button>
+                </div>
+            </div>
+            <div class="card" data-modal="modal-winter">
+                <img class="card-img" src="https://picsum.photos/id/35/500/300?random=3" alt="Зимние виды спорта">
+                <div class="card-content">
+                    <div class="badge">❄️ декабрь–апрель</div>
+                    <div class="card-title">Зимние виды спорта (Домбай, Архыз)</div>
+                    <div class="card-desc">Качественные трассы, фанпарки и потрясающие виды.</div>
+                    <button class="btn-card" data-modal="modal-winter">Подробнее</button>
+                </div>
+            </div>
+            <div class="card" data-modal="modal-rafting">
+                <img class="card-img" src="https://picsum.photos/id/294/500/300?random=4" alt="Рафтинг">
+                <div class="card-content">
+                    <div class="badge">🌊 рафтинг май–сент</div>
+                    <div class="card-title">Рафтинг и джиппинг</div>
+                    <div class="card-desc">Ущелья, бурные реки и бездорожье.</div>
+                    <button class="btn-card" data-modal="modal-rafting">Подробнее</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="ornament-divider"></div>
@@ -112,12 +211,27 @@
     <div class="ornament">✦ ❀ ✿ ⠀  Наследие гор  ⠀ ✿ ❀ ✦</div>
 </footer>
 
-<!-- Модальное окно -->
-<div id="modalOverlay" class="modal-overlay">
-    <div class="modal-container">
-        <button class="modal-close" id="closeModalBtn">&times;</button>
-        <div id="modalContent"></div>
-    </div>
+<!-- Модальные окна (скрыты, появляются через JS) -->
+<div id="modal-elbrus" class="modal-overlay">
+    <div class="modal-container"><button class="modal-close">&times;</button><div class="modal-title">Гора Эльбрус</div><div class="modal-text"><h3>Эльбрус — крыша Европы</h3><p>Высота западной вершины 5642 м, восточной — 5621 м. Легенда гласит, что именно к этой горе был прикован Прометей. Сегодня Эльбрус привлекает альпинистов со всего мира. Маршруты: Южный склон (канатные дороги до 3800 м) — классический, требует подготовки; Северный склон — более дикий. Лучший сезон для восхождения: июль–август. У подножия — Приэльбрусье с минеральными источниками и кафе с хычинами.</p><p>Совет: акклиматизируйтесь 2–3 дня в Терсколе, используйте услуги гида. Вид с седловины — невероятная панорама Кавказского хребта.</p></div></div>
+</div>
+<div id="modal-chegem" class="modal-overlay">
+    <div class="modal-container"><button class="modal-close">&times;</button><div class="modal-title">Чегемские водопады</div><div class="modal-text"><h3>Чегемские водопады (Кабардино-Балкария)</h3><p>Группа водопадов на реке Чегем, самый известный «Девичьи косы» (30 м). Зимой замерзают в гигантские ледяные колонны — популярное место для альпинистов-ледолазов. Летом грохот воды слышен за километр. По ущелью можно прогуляться по смотровым площадкам. В 2 км — Чегемское ущелье с древними башнями.</p><p>Вход на экотропу — 200₽. Лучшее время: май-июнь (полноводье) или декабрь-февраль (ледяной плен). Рядом кафе с балкарским чаем.</p></div></div>
+</div>
+<div id="modal-dargavs" class="modal-overlay">
+    <div class="modal-container"><button class="modal-close">&times;</button><div class="modal-title">Даргавс «Город мёртвых»</div><div class="modal-text"><h3>Даргавс, Северная Осетия</h3><p>«Город мертвых» — комплекс наземных склепов, где хоронили людей с XIV по XIX век. Склепы пирамидальной формы, некоторые до 8 метров. По преданию, во времена эпидемии чумы заболевшие уходили в склеп добровольно. Атмосфера завораживает: горы, тишина, белые камни. Находится в 35 км от Владикавказа. Посещение с гидом обязательно — местные верят в силу предков. Вход 250₽, фотосъемка разрешена.</p><p>Осенью склоны золотые, зрелище невероятное.</p></div></div>
+</div>
+<div id="modal-kezenoy" class="modal-overlay">
+    <div class="modal-container"><button class="modal-close">&times;</button><div class="modal-title">Озеро Кезеной-Ам</div><div class="modal-text"><h3>Кезеной-Ам (Эйзенам)</h3><p>Расположено на границе Чечни и Дагестана, на высоте 1870 м. Длина 2 км, глубина до 74 м. Вода прозрачная, летом прогревается до 18°C. Здесь водится эйзенамская форель (попробуйте уху в кафе на берегу). Можно арендовать катамаран, а зимой озеро замерзает — катаются на коньках. В 2021 году построен туристический комплекс «Кезеной-Ам» с отелями и спортплощадками. Легенда: озеро возникло из слез юной девушки, оплакивающей возлюбленного.</p></div></div>
+</div>
+<div id="modal-trekking" class="modal-overlay">
+    <div class="modal-container"><button class="modal-close">&times;</button><div class="modal-title">Трекинг и горные походы</div><div class="modal-text"><h3>Пешие маршруты по Чегемскому и Баксанскому ущелью</h3><p>Популярный трек к подножью Эльбруса (озеро Гижгит), или к ледникам Адылсу. Многодневный маршрут «Карачаево-Черкесия: Архыз — перевал Пхия». Требуется физическая подготовка. Самый лёгкий поход — к Чегемским водопадам (3 км). Берите карты Maps.me, проверяйте погоду, ходите с гидами в высокогорье.</p><p>Групповые туры: 5 дней от 25 000₽ с проживанием. Не забудьте палки и гамаши от камней.</p></div></div>
+</div>
+<div id="modal-winter" class="modal-overlay">
+    <div class="modal-container"><button class="modal-close">&times;</button><div class="modal-title">Зимние виды спорта (Домбай, Архыз)</div><div class="modal-text"><h3>Горнолыжный рай — Домбай и Архыз</h3><p>Курорт Домбай (1600–3168 м) предлагает 25 км трасс, включая чёрные. Архыз — более современный, с 25 подъёмниками и школой сноуборда. Сезон длится с декабря по апрель. Прокат снаряжения от 1500₽/день. Для фрирайдера — дикие склоны, но лавинная опасность. Лучшие отели: «Крокус», «Амазонка». Подъёмник на вершину Мусса-Ачитара открывает невероятную панораму Главного хребта.</p><p>Совет: бронируйте жилье за 2 месяца, в пик спрос огромен.</p></div></div>
+</div>
+<div id="modal-rafting" class="modal-overlay">
+    <div class="modal-container"><button class="modal-close">&times;</button><div class="modal-title">Рафтинг и джиппинг</div><div class="modal-text"><h3>Река Черек, Баксан и джип-туры по перевалам</h3><p>Рафтинг 3–4 категории сложности на реке Черек (Кабардино-Балкария) — острые ощущения гарантированы. Сплавы проходят с инструктором, стоимость от 3000₽. Джиппинг: заброска к ледникам или в высокогорные села. Самый эпичный маршрут — подъем на плато Бермамыт (вид на Эльбрус).</p><p>Экскурсии на УАЗ или Toyota Land Cruiser. С собой возьмите тёплую куртку, дождевик, фотоаппарат.</p></div></div>
 </div>
 
 <script src="script.js"></script>
