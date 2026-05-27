@@ -1,40 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // ========== ЗАМЕНА ИЗОБРАЖЕНИЙ КАРТОЧЕК ==========
-    const imageUpdates = {
-        "Гостеприимство и куначество": "https://avatars.mds.yandex.net/get-vthumb/4605631/82bfcda30e5b1adbce334da640c645dd/564x318_1",
-        "Национальная кухня": "https://avatars.mds.yandex.net/get-vertis-journal/4471904/21_Image_fx-111-2_kopiya.jpg_1755549714000/1600x1600",
-        "Танцы и музыка": "https://cdn-image.zvuk.com/pic?hash=150811a9-2a42-40be-932b-35e9097abfbc&id=42574099&size=large&type=release"
-    };
-
-    // Функция обновления ссылок (ищет карточки по заголовкам)
-    function updateCardImages() {
-        // Ищем все возможные контейнеры карточек – подставьте свой селектор, если нужно
-        const cards = document.querySelectorAll('.card, .cards__item, .card-item, [data-card]');
-        cards.forEach(card => {
-            // Ищем заголовок внутри карточки
-            const titleElem = card.querySelector('.card-title, h3, h2, .title, .card__title');
-            if (!titleElem) return;
-            const title = titleElem.innerText.trim();
-            if (imageUpdates[title]) {
-                const img = card.querySelector('img');
-                if (img && img.src !== imageUpdates[title]) {
-                    img.src = imageUpdates[title];
-                    // Опционально: обновить srcset, если используется
-                    if (img.srcset) img.srcset = '';
-                }
-            }
-        });
-    }
-
-    // Выполняем замену после загрузки DOM (а также можно добавить наблюдение за динамическими карточками)
-    updateCardImages();
-
-    // Если карточки подгружаются позже (например, через fetch), вы можете вызвать updateCardImages() снова
-    // Для надёжности – наблюдаем за изменениями в DOM
-    const observer = new MutationObserver(() => updateCardImages());
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    // ========== Ваш существующий код (модальные окна, бургер, аккордеон и т.д.) ==========
     // Модальные окна: открытие по кнопкам с data-modal
     const modals = document.querySelectorAll('.modal-overlay');
     const btns = document.querySelectorAll('.btn-card');
@@ -124,4 +88,25 @@ document.addEventListener('DOMContentLoaded', () => {
         if (firstContent) firstContent.classList.add('show');
         if (firstIcon) firstIcon.style.transform = 'rotate(180deg)';
     }
+
+    // ========== ЗАМЕНА ССЫЛОК КАРТОЧЕК (только это добавлено) ==========
+    const newImages = {
+        "Гостеприимство и куначество": "https://avatars.mds.yandex.net/get-vthumb/4605631/82bfcda30e5b1adbce334da640c645dd/564x318_1",
+        "Национальная кухня": "https://avatars.mds.yandex.net/get-vertis-journal/4471904/21_Image_fx-111-2_kopiya.jpg_1755549714000/1600x1600",
+        "Танцы и музыка": "https://cdn-image.zvuk.com/pic?hash=150811a9-2a42-40be-932b-35e9097abfbc&id=42574099&size=large&type=release"
+    };
+
+    // Ищем все карточки (подставьте свой селектор, если нужно)
+    const cards = document.querySelectorAll('.card, .cards__item, .card-item');
+    cards.forEach(card => {
+        // Ищем заголовок карточки
+        const titleElem = card.querySelector('.card-title, h3, h2, .title');
+        if (titleElem) {
+            const title = titleElem.innerText.trim();
+            if (newImages[title]) {
+                const img = card.querySelector('img');
+                if (img) img.src = newImages[title];
+            }
+        }
+    });
 });
